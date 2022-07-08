@@ -8,21 +8,21 @@ executors:
 jobs: 
   build: 
     executor: my-executor
-  steps:
-    - checkout
-    - run: npm run lint  
+    steps:
+      - checkout
+      - run: npm run lint  
 
   test: 
     executor: my-executor 
-  steps: 
-    - checkout 
-    - run: npm run test 
+    steps: 
+      - checkout 
+      - run: npm run test 
 
   analyze: 
     executor: my-executor 
-  steps: 
-    - checkout 
-    - npm audit 
+    steps: 
+      - checkout 
+      - npm audit 
 
 workflows:
   my-workflows:
