@@ -22,7 +22,7 @@ jobs:
     executor: my-executor 
     steps: 
       - checkout 
-      - npm audit 
+      - run: npm audit 
 
 workflows:
   my-workflows:
